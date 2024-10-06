@@ -1,22 +1,45 @@
-body {
+body { /*looking at the css rule stacks provided under the assignment instructions */
   background-image: url("../images/black.jpg");
 } 
 
 #page-wrapper {
-  width: 1000px;
-  margin: 0;
+  width: 960px;
+  margin: 0 auto; /*adding auto makes page centered*/
   border-radius: 12px 12px 0px 0px;
-  box-shadow: 0px 4px 4px 4px;
-}
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 1);} /*changes opacity of box shadow*/
 
 #header {
   position: relative;
-  margin-top: 50px;
+  margin-top: 40px;
   border-radius: 12px 12px 0px 0px; 
 }
 
-#footer {
-  background-color: gray;
+#header h1 {
+  position: absolute;
+  left: 420px;
+  top: 5px;
+  font-size: 3em;
+  font-family: 'Devonshire', cursive; /*makes the "my demo site" cursive */
+  color: #E35335;
+}
+
+#header a#logo1 img {
+  margin-top: 20px; /*moves the ACME logo*/
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#header #toplink {
+  text-decoration: none;
+  position: absolute;
+  top: -34px;
+  right: 10px;
+  color: white;
+  font-size: 1.8em;
+}
+
+#footer { 
+  background-color: #777; /*footer on bottom of page with gray box*/
   height: 80px;
   clear: both;
 }
@@ -26,21 +49,35 @@ body {
   float: left;
 }
 
-#main-content {
+#main-content { /*aligns the text to the middle*/
   min-height: 300px;
-  width: 800px;
+  width: 715px;
   margin-right: 30px;
   float: left;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
-#side-content {
+h2 strong {
+  font-size: 2em; /*bolds and makes the h2 big*/
+  font-weight: 900;
+}
+
+.image-r { /*puts the main squeeze logo to the right and puts blue border*/
+  float: right;
+  border: 2px solid blue;
+  width: 300px;
+  padding: 5px;
+  background-color: white;
+  margin: 10px 0 10px 20px;
+}
+
+#side-content { /*puts the interesting articles to the right*/
   min-height: 150px;
   width: 200px;
   float: left;
 }
 
-#main-nav {
+#main-nav { /*puts a gray box strip where the buttons are*/
   float: left;
   width: 100%;
   background-color: #333;
@@ -55,26 +92,30 @@ body {
   left: 50%;
 }
 
-#main-nav ul li{
+#main-nav ul li{ /*makes the buttons horizontal*/
   float: left;
   position: relative;
   right: 50%;
 }
 
-#main-nav ul li a{
+#main-nav ul li a{ /*removes the blue link color and makes text bigger*/
   padding: 10px 25px;
   display: block;
   text-decoration: none;
-  color: white;
+  color: #ccc;
 }
 
 #main-nav ul li a:hover {
-  background-color: red; /*hover over the nav links and has box that turns red*/
-  color: black;
-  border-radius: 20px;
+  background-color: #ccc; /*hover over the nav links and has box that turns gray*/
+  color: #333;
 }
 
 #center { /*makes video centered*/
-  width: 800px;
+  width: 960px;
   text-align: center;
+}
+
+strong {
+  font-weight: 900;
+  font-size: 48px;
 }
